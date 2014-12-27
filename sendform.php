@@ -5,7 +5,9 @@
   	header( "Location: thankyou.html" );
 
   $name = $_REQUEST['name'] ;
-  $message = $_REQUEST['message'] ;
+
+  $message = "Consulting enquiry from $name at $email";
+  $message .= "\n\n" . $_REQUEST['message'] ;
   $message .= "\n\n" . date("r");
 
   $reply = "Hi there\n\n"
