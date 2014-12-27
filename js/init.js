@@ -107,11 +107,12 @@
 			// Lightbox gallery.
 				$('#two').poptrox({
 					caption: function($a) { return $a.next('h3').text(); },
+					preload: true,
 					overlayColor: '#2c2c2c',
 					overlayOpacity: 0.85,
 					popupCloserText: '',
 					popupLoaderText: '',
-					selector: '.work-item a',
+					selector: '.work-item .image',
 					usePopupCaption: true,
 					usePopupDefaultStyling: false,
 					usePopupEasyClose: true,
