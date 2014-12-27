@@ -16,7 +16,7 @@
   			."All the best, and speak shortly!\n\n"
   			."Andy at Saccade Consulting";
 
-  mail( "andy@saccade.co", "Enquiry at Saccade.co",
+  mail( "andy@saccadeltd.co.uk", "Enquiry at Saccade.co",
     $message, "From: Consulting Enquiry <andy@saccade.co>" );
 
   mail( "$email", "Your CTO Enquiry at Saccade.co",
