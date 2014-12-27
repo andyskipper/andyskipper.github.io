@@ -1,5 +1,9 @@
 <?php
   $email = $_REQUEST['email'] ;
+  
+  if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+  	header( "Location: thankyou.html" );
+
   $name = $_REQUEST['name'] ;
   $message = $_REQUEST['message'] ;
   $message .= "\n\n" . date("r");
@@ -12,7 +16,7 @@
   			."All the best, and speak shortly!\n\n"
   			."Andy at Saccade Consulting";
 
-  mail( "andy@saccade.co", "Enquiry at Saccade.co - $name",
+  mail( "andy@saccade.co", "Enquiry at Saccade.co",
     $message, "From: Consulting Enquiry <andy@saccade.co>" );
 
   mail( "$email", "Your CTO Enquiry at Saccade.co",
