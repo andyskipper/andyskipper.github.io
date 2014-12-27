@@ -15,7 +15,18 @@
 			<link rel="stylesheet" href="css/style.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-58043824-1', 'auto');
+			ga('send', 'pageview');
+		</script>
 	</head>
+	
 	<body id="top">
 
 		<!-- Header -->
@@ -150,16 +161,17 @@
 						<p>For a free, no-obligation chat, please enter a message below, or email or telephone me directly.</p>
 						<div class="row">
 							<div class="8u 12u$(2)">
-								<form method="post" action="#">
+								<form method="post" action="sendform.php">
 									<div class="row uniform 50%">
-										<div class="6u 12u$(3)"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="6u$ 12u$(3)"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+										<div class="6u 12u$(3)"><input type="text" name="name" id="name" placeholder="Name" required /></div>
+										<div class="6u$ 12u$(3)"><input type="email" name="email" id="email" placeholder="Email"required  /></div>
+										<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4"required ></textarea></div>
 									</div>
+									<br />
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" /></li>
+									</ul>
 								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
 							</div>
 							<div class="4u$ 12u$(2)">
 								<ul class="labeled-icons">
@@ -185,7 +197,7 @@
 		<!-- Footer -->
 			<footer id="footer">
 				<ul class="icons">
-					<li><a href="https://twitter.com/andyskipper" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://twitter.com/ConsultingCTO" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 					<li><a href="https://uk.linkedin.com/in/andyskipper" target="_blank" class="icon fa-linkedin-square"><span class="label">LinkedIn</span></a></li>
 					<li><a href="https://plus.google.com/105655661649194098973/" class="icon fa-google-plus" target="_blank"><span class="label">Google+</span></a></li>
 					<li><a href="mailto:andy@saccade.co" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
