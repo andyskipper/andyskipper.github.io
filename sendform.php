@@ -13,7 +13,7 @@
   			."Andy at Saccade Consulting";
 
   mail( "andy@saccade.co", "Enquiry at Saccade.co - $name",
-    $message, "From: $name <$email>" );
+    $message, "From: Consulting Enquiry <andy@saccade.co>" );
 
   mail( "$email", "Your CTO Enquiry at Saccade.co",
     $reply, "From: Andy at Saccade Consulting <andy@saccade.co>" );
