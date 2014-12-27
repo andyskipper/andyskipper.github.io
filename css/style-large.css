@@ -7,22 +7,29 @@
 /* Header */
 
 	#header {
-		padding: 6em 3em 3em 3em;
+		padding: 3em 3em 3em 1em;
 		width: 30%;
 	}
 
 		#header h1 {
-			font-size: 1.25em;
+			/*font-size: 1.25em;*/
+			font-size: 90%;
 		}
 
+		#header-services {
+			font-size: 0.8em;
+			margin-top: 2em;
+			list-style-position: inside;
+		}
+/*
 			#header h1 br {
 				display: none;
 			}
-
+*/
 /* Footer */
 
 	#footer {
-		padding: 0 3em 5em 3em;
+		padding: 0 3em 1em 3em;
 		width: 30%;
 	}
 
@@ -39,6 +46,6 @@
 	#main {
 		margin-left: 30%;
 		max-width: none;
-		padding: 6em 3em 3em 3em;
+		padding: 2em 3em 3em 2em;
 		width: calc(100% - 30%);
 	}

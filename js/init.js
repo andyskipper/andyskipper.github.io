@@ -21,8 +21,7 @@
 		containers: '100%',
 		breakpoints: {
 			global: { href: 'css/style.css', grid: { gutters: ['2.5em', 0] } },
-			xlarge: { media: '(max-width: 1800px)', href: 'css/style-xlarge.css' },
-			large: { media: '(max-width: 1280px)', href: 'css/style-large.css', grid: { gutters: ['2em', 0] } },
+			large: { media: '(max-width: 3200px)', href: 'css/style-large.css', grid: { gutters: ['2em', 0] } },
 			medium: { media: '(max-width: 980px)', href: 'css/style-medium.css'},
 			small: { media: '(max-width: 736px)', href: 'css/style-small.css', grid: { gutters: ['1.5em', 0], zoom: 2 }, viewport: { scalable: false } },
 			xsmall: { media: '(max-width: 480px)', href: 'css/style-xsmall.css', grid: { zoom: 3 } }
@@ -91,10 +90,10 @@
 						}
 						else {
 							
-							$header.css('background-position', '-150% 0px');
+							$header.css('background-position', '-400px 0px');
 					
 							$window.on('scroll.strata_parallax', function() {
-								$header.css('background-position', '-150% ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
+								$header.css('background-position', '-400px ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
 							});
 							
 						}
@@ -115,7 +114,7 @@
 					selector: '.work-item a',
 					usePopupCaption: true,
 					usePopupDefaultStyling: false,
-					usePopupEasyClose: false,
+					usePopupEasyClose: true,
 					usePopupNav: true,
 					windowMargin: (skel.isActive('small') ? 0 : 50)
 				});
@@ -123,3 +122,14 @@
 	});
 
 })(jQuery);
+
+function scrollToElement(selector, time, verticalOffset) {
+    time = typeof(time) != 'undefined' ? time : 1000;
+    verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+    element = $(selector);
+    offset = element.offset();
+    offsetTop = offset.top + verticalOffset;
+    $('html, body').animate({
+        scrollTop: offsetTop
+    }, time);           
+}

@@ -6,9 +6,7 @@
 
 /* Basic */
 
-	h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
-		display: none;
-	}
+	
 
 /* List */
 
@@ -23,7 +21,7 @@
 		background-position: top left,	center center;
 		background-size: auto,		cover;
 		left: auto;
-		padding: 6em 4em;
+		padding: 2em 4em;
 		position: relative;
 		text-align: center;
 		top: auto;
@@ -34,9 +32,7 @@
 			font-size: 1.75em;
 		}
 
-			#header h1 br {
-				display: inline;
-			}
+			#header-services { display: none; }
 
 /* Footer */
 
@@ -75,6 +71,6 @@
 
 	#main {
 		margin: 0;
-		padding: 6em 4em;
+		padding: 2em 4em;
 		width: 100%;
 	}

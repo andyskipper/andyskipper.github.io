@@ -9,3 +9,11 @@
 	body, input, select, textarea {
 		font-size: 12pt;
 	}
+
+	#header-services {
+			font-size: 0.8em;
+			margin-top: 2em;
+			list-style-position: inside;
+		}
+
+		
